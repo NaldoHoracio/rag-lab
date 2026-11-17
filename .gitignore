@@ -13,6 +13,9 @@ __pycache__/
 # Ignorar pasta data/
 data/
 
+# Ignorar pasta gerada pelo teste
+.pytest_cache
+
 # Ambiente conda criado dentro do repositório
 /bin/
 /compiler_compat/
