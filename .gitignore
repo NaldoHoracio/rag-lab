@@ -12,3 +12,20 @@ __pycache__/
 
 # Ignorar pasta data/
 data/
+
+# Ambiente conda criado dentro do repositório
+/bin/
+/compiler_compat/
+/conda-meta/
+/etc/
+/include/
+/lib/
+/man/
+/share/
+/ssl/
+/x86_64-conda-linux-gnu/
+
+# Banco vetorial gerado localmente
+/path/
+chroma_db/
+*.sqlite3
