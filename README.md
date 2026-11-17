@@ -4,6 +4,7 @@ Repositório dedicado ao estudo e implementação de técnicas de **RAG (Retriev
 
 ## Estrutura do Projeto
 
+```
 rag-lab/
 ├── chroma_db/               # Banco vetorial gerado pela indexação (não versionado)
 ├── data/
@@ -26,6 +27,13 @@ rag-lab/
 ├── .env                     # Variáveis de ambiente locais (não versionado)
 ├── requirements.txt
 └── README.md
+```
+
+### Fluxo do RAG
+
+1. **Indexação** (`build_index.py`): os PDFs de `data/data-raw/` são lidos página por página, divididos em chunks com sobreposição, transformados em embeddings e salvos no ChromaDB.
+2. **Retrieval** (`ask.py`): a pergunta vira um embedding e o ChromaDB devolve os trechos mais parecidos (similaridade de cosseno).
+3. **Geração** (`generator.py`): os trechos são enviados ao LLM local junto com a pergunta, e a resposta cita as fontes por arquivo e página.
 
 ## Tecnologias Utilizadas
 
